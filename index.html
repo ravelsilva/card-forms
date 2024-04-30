@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>Card Info</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="gradient">
+        <div class="image-front">
+          <div class="i"><img src="/assets/images/card-logo.svg" alt="" /></div>
+          <div class="number-card">0000 0000 0000 0000</div>
+          <div class="name-date">
+            <p class="name-card">NAME CARD</p>
+            <p>
+              <span class="month"> 00 </span> / <span class="year"> 00</span>
+            </p>
+          </div>
+        </div>
+        <div class="image-back">
+          <p class="cvc-number">000</p>
+        </div>
+      </div>
+      <div class="container">
+        <form class="formulario">
+          <div class="name card">
+            <label for="name">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="ex: Ravel Silva"
+              required />
+          </div>
+          <div class="number card">
+            <label for="number">CARD NUMBER</label>
+            <input
+              type="text"
+              id="number"
+              name="number"
+              placeholder="ex: 1234 5678 9123 0000"
+              maxlength="16"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              required />
+          </div>
+          <div class="date-code">
+            <div class="date card">
+              <label for="date">EXP. DATE (MM/YY)</label>
+              <input
+                type="text"
+                id="date"
+                name="date"
+                placeholder="MM"
+                maxlength="2"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                required />
+              <input
+                type="text"
+                id="year"
+                name="ano"
+                placeholder="YY"
+                maxlength="2"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                required />
+            </div>
+            <div class="cvc card">
+              <label for="cvc">CVC</label>
+              <input
+                type="text"
+                id="cvc"
+                name="cvc"
+                placeholder="ex: 123"
+                maxlength="3"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                required />
+            </div>
+          </div>
+          <button class="confirm">Confirm</button>
+        </form>
+        <div class="add-card inactive">
+          <img src="/assets/images/icon-complete.svg" alt="" />
+          <p class="tks">Thank You!</p>
+          <p>We've added your card details</p>
+          <button class="continue">Continue</button>
+        </div>
+      </div>
+    </main>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>
